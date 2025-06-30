@@ -6,10 +6,10 @@ public class Property {
     private int precio;
     private int renta;
     private Player dueno;
-    private House casas;
+    private int casas;
     private boolean estaHipotecada;
 
-    public Property(int id, String nombre, int precio, int renta, Player dueno, House casas, boolean estaHipotecada) {
+    public Property(int id, String nombre, int precio, int renta, Player dueno, int casas, boolean estaHipotecada) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -59,11 +59,11 @@ public class Property {
         this.dueno = dueno;
     }
 
-    public House getCasas() {
+    public int getCasas() {
         return casas;
     }
 
-    public void setCasas(House casas) {
+    public void setCasas(int casas) {
         this.casas = casas;
     }
 
