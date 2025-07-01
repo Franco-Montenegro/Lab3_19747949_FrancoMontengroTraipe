@@ -74,4 +74,15 @@ public class Property {
     public void setEstaHipotecada(boolean estaHipotecada) {
         this.estaHipotecada = estaHipotecada;
     }
+
+    @Override
+    public String toString() {
+        return "Propiedad #" + id + " - " + nombre +
+                " | Precio: $" + precio +
+                " | Renta base: $" + renta +
+                " | Dueño: " + (dueno != null ? dueno.getNombre() : "Sin dueño") +
+                " | Casas: " + casas +
+                " | Hipotecada: " + (estaHipotecada ? "Sí" : "No");
+    }
+
 }

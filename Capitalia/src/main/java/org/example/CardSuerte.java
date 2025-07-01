@@ -1,6 +1,19 @@
 package org.example;
 
-public class CardSuerte {
+public class CardSuerte extends Card {
 
-    private String nombre;
+    public CardSuerte(int id, String descripcion) {
+        super(id, descripcion);
+    }
+
+    @Override
+    public void accion(Player jugador, Game juego) {
+        // Lógica específica de la carta suerte
+        System.out.println("Carta Suerte: " + descripcion);
+    }
+    @Override
+    public String toString() {
+        return "[SUERTE] " + super.toString();
+    }
+
 }

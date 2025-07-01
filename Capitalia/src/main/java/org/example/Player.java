@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Player {
 
@@ -16,7 +17,7 @@ public class Player {
         this.id = id;
         this.nombre = nombre;
         this.dinero = dinero;
-        this.propiedades = propiedades;
+        this.propiedades = (propiedades != null) ? propiedades : new ArrayList<>();
         this.posicionActual = posicionActual;
         this.estaEnCarcel = estaEnCarcel;
         this.totalCartasSalirCarcel = totalCartasSalirCarcel;
@@ -77,4 +78,14 @@ public class Player {
     public void setEstaEnCarcel(boolean estaEnCarcel) {
         this.estaEnCarcel = estaEnCarcel;
     }
+    @Override
+    public String toString() {
+        return "Jugador: " + nombre +
+                " | Dinero: $" + dinero +
+                " | Posición: " + posicionActual +
+                " | En cárcel: " + (estaEnCarcel ? "Sí" : "No") +
+                " | Cartas Salir Cárcel: " + totalCartasSalirCarcel +
+                " | Propiedades: " + propiedades.size();
+    }
+
 }
