@@ -8,7 +8,6 @@ public class CardComunidad extends Card {
 
     @Override
     public void accion(Player jugador, Game juego) {
-        // Lógica específica de la carta comunidad
         System.out.println("Carta Comunidad: " + descripcion);
     }
     @Override

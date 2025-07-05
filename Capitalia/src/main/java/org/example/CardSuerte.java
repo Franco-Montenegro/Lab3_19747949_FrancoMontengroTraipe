@@ -8,7 +8,6 @@ public class CardSuerte extends Card {
 
     @Override
     public void accion(Player jugador, Game juego) {
-        // Lógica específica de la carta suerte
         System.out.println("Carta Suerte: " + descripcion);
     }
     @Override

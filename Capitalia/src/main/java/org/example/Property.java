@@ -70,12 +70,43 @@ public class Property {
         this.casas = casas;
     }
 
-    public boolean isEstaHipotecada() {
+    public boolean getEstaHipotecada() {
         return estaHipotecada;
     }
 
     public void setEstaHipotecada(boolean estaHipotecada) {
         this.estaHipotecada = estaHipotecada;
+    }
+    public boolean esHotel() {
+        return false;
+    }
+
+    public int calcularRenta(int maximoCasas) {
+        if (estaHipotecada) return 0;
+
+        int base = precio;
+
+        if (casas > 0 && casas < maximoCasas) {
+            return (int) (base + (base * 0.2 * casas));
+        }
+
+        if (casas == maximoCasas && !esHotel()) {
+            return (int) (base + (base * 0.2 * casas));
+        }
+
+        if (esHotel()) {
+            double rentaConCasas = base + (base * 0.2 * maximoCasas);
+            return (int) (rentaConCasas * 2);
+        }
+
+        return base;
+    }
+    public boolean puedeConstruirHotel(int maximoCasas) {
+        return !esHotel() && casas == maximoCasas;
+    }
+
+    public void construirHotel() {
+        casas = 0;
     }
 
     @Override

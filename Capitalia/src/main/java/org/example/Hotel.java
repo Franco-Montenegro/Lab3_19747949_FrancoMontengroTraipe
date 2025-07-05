@@ -5,6 +5,11 @@ public class Hotel extends Property {
         super(id, nombre, precio, rentaBase, dueno, casas, estaHipotecada);
         this.setCasas(0);
     }
+
+    @Override
+    public boolean esHotel() {
+        return true;
+    }
 }
 
 
