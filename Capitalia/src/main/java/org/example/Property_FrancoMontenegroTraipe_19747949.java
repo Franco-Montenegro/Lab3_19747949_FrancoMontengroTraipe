@@ -1,18 +1,15 @@
 package org.example;
 
-import java.util.List;
-import java.util.ArrayList;
-
-public class Property {
+public class Property_FrancoMontenegroTraipe_19747949 {
     private int id;
     private String nombre;
     private int precio;
     private int renta;
-    private Player dueno;
+    private Player_FrancoMontenegroTraipe_19747949 dueno;
     private int casas;
     private boolean estaHipotecada;
 
-    public Property(int id, String nombre, int precio, int renta, Player dueno, int casas, boolean estaHipotecada) {
+    public Property_FrancoMontenegroTraipe_19747949(int id, String nombre, int precio, int renta, Player_FrancoMontenegroTraipe_19747949 dueno, int casas, boolean estaHipotecada) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -54,11 +51,11 @@ public class Property {
         this.renta = renta;
     }
 
-    public Player getDueno() {
+    public Player_FrancoMontenegroTraipe_19747949 getDueno() {
         return dueno;
     }
 
-    public void setDueno(Player dueno) {
+    public void setDueno(Player_FrancoMontenegroTraipe_19747949 dueno) {
         this.dueno = dueno;
     }
 

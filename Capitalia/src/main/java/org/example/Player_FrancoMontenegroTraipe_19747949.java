@@ -3,17 +3,17 @@ package org.example;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Player {
+public class Player_FrancoMontenegroTraipe_19747949 {
 
     private int id;
     private String nombre;
     private int dinero;
-    private List<Property> propiedades;
+    private List<Property_FrancoMontenegroTraipe_19747949> propiedades;
     private int posicionActual;
     private boolean estaEnCarcel;
     private int totalCartasSalirCarcel;
 
-    public Player(int id, String nombre, int dinero, List<Property> propiedades, int posicionActual, boolean estaEnCarcel, int totalCartasSalirCarcel) {
+    public Player_FrancoMontenegroTraipe_19747949(int id, String nombre, int dinero, List<Property_FrancoMontenegroTraipe_19747949> propiedades, int posicionActual, boolean estaEnCarcel, int totalCartasSalirCarcel) {
         this.id = id;
         this.nombre = nombre;
         this.dinero = dinero;
@@ -55,11 +55,11 @@ public class Player {
         this.dinero = dinero;
     }
 
-    public List<Property> getPropiedades() {
+    public List<Property_FrancoMontenegroTraipe_19747949> getPropiedades() {
         return propiedades;
     }
 
-    public void setPropiedades(List<Property> propiedades) {
+    public void setPropiedades(List<Property_FrancoMontenegroTraipe_19747949> propiedades) {
         this.propiedades = propiedades;
     }
 
@@ -81,6 +81,7 @@ public class Player {
     @Override
     public String toString() {
         return "Jugador: " + nombre +
+                " | Id: " + id +
                 " | Dinero: $" + dinero +
                 " | Posición: " + posicionActual +
                 " | En cárcel: " + (estaEnCarcel ? "Sí" : "No") +
